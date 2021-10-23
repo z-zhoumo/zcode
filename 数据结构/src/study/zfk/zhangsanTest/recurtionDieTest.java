@@ -1,7 +1,6 @@
 package study.zfk.zhangsanTest;
 
 /**
- * @create 10-02 1:40
  */
 public class recurtionDieTest {
     public static void main(String[] args) {
