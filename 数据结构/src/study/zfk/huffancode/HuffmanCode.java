@@ -2,7 +2,6 @@ package study.zfk.huffancode;
 
 
 
-import org.junit.Test;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -44,7 +43,7 @@ public class HuffmanCode {
     }
 
     //测试压缩文件的代码
-    @Test
+
     public void FileTest(){
         String srcFile = "G://Bilibili_Study//尚硅谷数据结构//资料//压缩测试文件//txtTest.txt";
         String dstFile = "G://Bilibili_Study//尚硅谷数据结构//资料//压缩测试文件//outputTXT";
@@ -52,7 +51,7 @@ public class HuffmanCode {
     }
 
     //测试 解压 文件的代码
-    @Test
+
     public void UnZipFileTest(){
         String srcFile = "G://Bilibili_Study//尚硅谷数据结构//资料//压缩测试文件//outputTXT";
         String dstFile = "G://Bilibili_Study//尚硅谷数据结构//资料//压缩测试文件//txtTest2.txt";
