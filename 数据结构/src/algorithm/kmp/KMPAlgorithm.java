@@ -16,7 +16,7 @@ public class KMPAlgorithm {
 
         int[] next = kmpNext("aaab");
         /*
-        a aa aaa
+        算法 a aa aaa
 
 
          */
