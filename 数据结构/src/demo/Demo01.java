@@ -27,36 +27,9 @@ public class Demo01 {
 
 
     public static void quickSort(int[] nums, int left, int right) {
-       int p1 = left;
-       int p2 = right;
-       int midVal = nums[(p1+p2)/2];
-       while (p1 < p2){
-           while (nums[p1 ] < midVal){
-               p1 ++;
-           }
-           while (nums[p2] > midVal){
-               p2 --;
-           }
-           if(p1 >= p2){
-               break;
-           }
-           swap(nums,p1,p2);
-           if(midVal == nums[p1]){
-               p2--;
-           }
-           if(midVal == nums[p2]){
-               p1++;
-           }
-       }
-       if(p1 == p2){
-           p1 ++;
-           p2 --;
-       }
-       if(p1 < right){
-           quickSort(nums,p1,right);
-       }
-       if(p2 > left){
-           quickSort(nums,left,p2);
-       }
+      int p1 = left;
+      int p2 = right;
+      int midVal = nums[(left+right)/2];
+
     }
 }

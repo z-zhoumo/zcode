@@ -7,7 +7,7 @@ package algorithm.binarysearchnorecursion;
 public class BinarySearchNoRecur {
     public static void main(String[] args) {
         int[] arr = {1,3,8,11,67,100};
-        int index = binarySearch(arr,8);
+        int index = binarySearch(arr,6);
         System.out.println("index-->" + index);
     }
 
@@ -23,8 +23,8 @@ public class BinarySearchNoRecur {
 
         int left = 0;
         int right = arr.length-1;
-        while (left <= right){//继续查找
-            int mid = (right - left)/2;
+        while (left < right){//继续查找
+            int mid = (right + left)/2;
             if(arr[mid] == target){
                 return mid;
             } else if(arr[mid] > target){

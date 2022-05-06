@@ -1,7 +1,5 @@
 package com.juc.sync;
 
-import com.sun.xml.internal.ws.message.saaj.SAAJHeader;
-
 /*
     1 创建资源类，定义属性和操作方法
     2 判断 干活 通知
