@@ -14,15 +14,20 @@ public class Demo1 {
 
         //锁降级   在写操作时能进行读操作，叫锁降级
         //当先2 后1 时，只有--read，只能从写锁降级位读锁，不能读锁升级位写锁
-        //1 获取写锁
-        writeLock.lock();
-        System.out.println("zhangsan");
-        //2 获取读锁
+
+        //获取读锁
         readLock.lock();
         System.out.println("---read");
+
+        //1 获取写锁
+        writeLock.lock();
+        System.out.println("--write");
+        //2 获取读锁
+//        readLock.lock();
+//        System.out.println("---read");
         //3 释放写锁
-//        writeLock.unlock();
+        writeLock.unlock();
         //4 释放读锁
-//        readLock.unlock();
+        readLock.unlock();
     }
 }

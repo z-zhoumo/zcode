@@ -11,21 +11,21 @@ public class ThreadPoolDemo1 {
         //return new ThreadPoolExecutor(...)底层都是ThreadPoolExecutor
 
         //一池 5 线程   5个窗口
-//        ExecutorService threadPool1 =
-//                Executors.newFixedThreadPool(5);
+        ExecutorService threadPool1 =
+                Executors.newFixedThreadPool(5);
 
         //一池一线程   1个窗口
 //        ExecutorService threadPool1 =
 //                Executors.newSingleThreadExecutor();
 
         //一池可扩容线程
-        ExecutorService threadPool1
-                = Executors.newCachedThreadPool();
+//        ExecutorService threadPool1
+//                = Executors.newCachedThreadPool();
 
 
         //10个线程     10个顾客请求
         try {
-            for (int i = 1; i <= 20 ; i++) {
+            for (int i = 1; i <= 10 ; i++) {
                 threadPool1.execute(()->{
                     System.out.println(Thread
                             .currentThread().getName()+"办理业务");
