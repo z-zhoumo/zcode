@@ -34,8 +34,9 @@ public class DemoClass {
                     "输出A"+j+"轮开始");
             //输出
             for (int i = 0; i < 5; i++) {
-                System.out.println("A");
+                System.out.print("A");
             }
+            System.out.println();
             //开始打印 B
             num = 1;
             //唤醒
@@ -59,8 +60,9 @@ public class DemoClass {
                     "输出B"+j+"轮开始");
             //输出
             for (int i = 0; i < 10; i++) {
-                System.out.println("B");
+                System.out.print("B");
             }
+            System.out.println();
             //开始打印 C
             num = 2;
             //唤醒
@@ -84,8 +86,9 @@ public class DemoClass {
                     "输出C"+j+"轮开始");
             //输出
             for (int i = 0; i < 15; i++) {
-                System.out.println("C");
+                System.out.print("C");
             }
+            System.out.println();
             //开始打印 A
             num = 0;
             //唤醒
