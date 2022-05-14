@@ -10,7 +10,7 @@ import java.util.Date;
  * 而如果排序对象是复杂数据结构，则选择要远快于插入，冒泡的耗时接近插入的3倍。
  */
 public class SortDemo {
-    public static final int ARR_LENGTH = 8000000;
+    public static final int ARR_LENGTH = 10;
 
     public static void main(String[] args) {
 
@@ -25,7 +25,7 @@ public class SortDemo {
         int arr[] = new int[ARR_LENGTH];
         for (int i = 0; i < arr.length; i++) {
             //random（）是[0,1)所以产生随机数是[0,8000000)
-            arr[i] =(int) (Math.random()*8000000);
+            arr[i] =(int) (Math.random()*100);
         }
 
 
@@ -59,8 +59,8 @@ public class SortDemo {
         //排序前2021-09-19 15:09:06
         //排序后2021-09-19 15:09:19
 
-//        int temp[] = new int[arr.length];
-//        Merge.mergeSort(arr,0,arr.length-1,temp);
+        int temp[] = new int[arr.length];
+        Merge.mergeSort(arr,0,arr.length-1,temp);
         //ARR_LENGTH = 8000 0000;
         //排序前2021-09-19 15:07:33
         //排序后2021-09-19 15:07:47
@@ -70,7 +70,7 @@ public class SortDemo {
         // 排序前2021-09-20 11:05:16
         //排序后2021-09-20 11:05:17
 
-        HeapSortDemo.heapSort(arr);
+//        HeapSortDemo.heapSort(arr);
         // 800 0000
         //排序前2021-10-03 14:01:17
         //排序后2021-10-03 14:01:19
@@ -82,7 +82,7 @@ public class SortDemo {
         System.out.println("\n排序前" + dateStr1 + "\n排序后" + dateStr2);
 
 
-//        list(arr);
+        list(arr);
 
 
     }

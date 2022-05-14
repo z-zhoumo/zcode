@@ -12,7 +12,7 @@ public class Merge {
 
      //分加和的方法
      public static void mergeSort(int[] arr, int left, int right ,int[] temp){
-//          System.out.println("/(ㄒoㄒ)/~~");
+          System.out.println("/(ㄒoㄒ)/~~");
           if(left < right){
                int mid = (left+right)/2;//中间的索引
                //向左递归进行分解
