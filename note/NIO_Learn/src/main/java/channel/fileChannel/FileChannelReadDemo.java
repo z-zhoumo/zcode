@@ -13,7 +13,7 @@ public class FileChannelReadDemo {
         FileChannel channel = raFile.getChannel();
 
         //创建 buffer 大小为 5 byte
-        ByteBuffer buffer = ByteBuffer.allocate(5);
+        ByteBuffer buffer = ByteBuffer.allocate(100);
 
         //读取数据到 buffer 中
         int byteRead = channel.read(buffer);

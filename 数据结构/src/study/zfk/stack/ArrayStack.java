@@ -9,7 +9,7 @@ public class ArrayStack {
     private int[] stack;
     private int top = -1;
     //构造器
-    public ArrayStack(int maxSize){
+     public ArrayStack(int maxSize){
         this.maxSize = maxSize;
         stack = new int[this.maxSize];
     }

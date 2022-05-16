@@ -18,7 +18,7 @@ public class Radix {
             }
         }
         //得到最大的位数
-        int maxLength = (max +"").length();
+        int maxLength = max + 1;
 
 
         //定义一个二维数组，表示10个桶，每个桶就是一个一维数组
