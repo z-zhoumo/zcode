@@ -8,9 +8,9 @@ import java.util.List;
 public class demo {
     public static void main(String[] args) {
         int arr[] = new int[]{5, 33, 0, 123, 1, 2, 2, 1, 4, 23, 123, 123, 1, 2, 42, 13, 423, 4, 12};
-//        bubbleSort(arr);
+        bubbleSort(arr);
 //         quickSort(arr, 0, arr.length - 1);
-        radixSort(arr);
+//        radixSort(arr);
         System.out.println(Arrays.toString(arr));
 
     }
@@ -18,13 +18,10 @@ public class demo {
 
     public static void bubbleSort(int[] nums) {
         for (int i = 0; i < nums.length; i++) {
-            for (int j = 0; j < nums.length - i - 1; j++) {
-                if (nums[j + 1] < nums[j]) {
-                    int temp = nums[j];
-                    nums[j] = nums[j + 1];
-                    nums[j + 1] = temp;
+            for (int j = 0; j < nums.length - i -1; j++) {
+                if (nums[j] > nums[j +1]){
+                    Utils.swap(nums,j,j+1);
                 }
-
             }
         }
 
@@ -65,39 +62,37 @@ public class demo {
 
 
     public static void quickSort(int[] nums, int left, int right) {
-        int a = left;
-        int b = right;
-        int midVal = nums[(a + b) / 2];
+       int a = left;
+       int b = right;
+       int midVal = nums[(a + b)/2];
 
-        while (a < b) {
-            while (nums[a] < midVal) {
-                a++;
-            }
-            while (nums[b] > midVal) {
-                b--;
-            }
-
-            if (a >= b) {
-                break;
-            }
-            Utils.swap(nums, a, b);
-            if (nums[a] == midVal) {
-                b--;
-            }
-            if (nums[b] == midVal) {
-                a++;
-            }
-        }
-        if (a == b) {
-            a++;
-            b--;
-        }
-        if (a < right) {
-            quickSort(nums, a, right);
-        }
-        if (b > left) {
-            quickSort(nums, left, b);
-        }
-
+       while (a < b){
+           while (nums[a] < midVal){
+               a ++;
+           }
+           while (nums[b] > midVal){
+               b -- ;
+           }
+           if(a >= b){
+               break;
+           }
+           Utils.swap(nums,a,b);
+           if(nums[a] == midVal){
+               b--;
+           }
+           if(nums[b] == midVal){
+               a ++;
+           }
+       }
+       if(a == b){
+           a ++;
+           b--;
+       }
+       if(a < right ){
+           quickSort(nums,a,right);
+       }
+       if(left < b){
+           quickSort(nums,left,b);
+       }
     }
 }
